@@ -11,14 +11,13 @@ class Choice(Enum):
 def main():
     while(True):
         func_name,args=user_input()
-        print(args)
         if func_name =='end':
             break
         mod = importlib.import_module(func_name)
         func = getattr(mod, func_name, None)
 
         if callable(func):
-            func()
+            func(*args)
         else:
             print(f"{func_name} not found in {func_name}")
 #offer
@@ -41,7 +40,7 @@ def user_input():
                 raise ValueError
             return (list(Choice)[choice-1].value, val[1:])
         except ValueError:
-            print("Input must be an integer choice between 1-3!")
+            print("Input must be an integer choice between 1-4!")
 
   
     

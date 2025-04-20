@@ -1,2 +1,3 @@
-def search():
-    print("You have searched for dogs")
+def search(*args):
+    for i in args:
+        print("You have searched for: ",i)

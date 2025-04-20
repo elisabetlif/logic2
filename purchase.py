@@ -1,2 +1,3 @@
-def purchase():
-    print("You have made an purchase!")
+def purchase(*args):
+    for i in args:
+        print("You have purchased: ",i)

@@ -1,2 +1,3 @@
-def offer():
-    print("You have made an offer!")
+def offer(*args):
+    for i in args:
+        print("You have offered:", i)

@@ -17,13 +17,13 @@ def main():
         func = getattr(mod, func_name, None)
 
         if callable(func):
-            func(*args)
+            try:
+                func(*args)
+            except Exception as e:
+                print("Something went wrong:", e)
         else:
             print(f"{func_name} not found in {func_name}")
-#offer
-#search
-#purchase
-#change db
+
 def user_input():
     print("\nWelcome\n")
     print("Actions:")

@@ -1,0 +1,82 @@
+{
+"registered customers": {
+    "label": "blabla",
+    "data":[
+        {
+        "customer_id": 1,
+        "name": "george"
+        },
+        {
+            "id": 2,
+            "name": "Maude" 
+        }
+    ]
+},
+"vendors":{
+    "label": "blabla",
+    "data":[
+        {
+        "vendor_id":1,
+        "name": "Bob"
+        },
+        {
+        "id":2,
+        "name": "Steve" 
+        }
+    ]
+},
+"current book offerings":{
+    "label":"blablabla",
+    "data":[
+        {
+        "book_id":1,
+        "title": "Huckleberry Finn",
+        "author": "someone",
+        "year": 1999,
+        "edition": 2,
+        "publisher": "Penguin House",
+        "condition": "worn",
+        "description": "A delightful coming of age",
+        "price": 30,
+        "name_vendor": "Bob"
+        }
+
+    ]
+},
+"sold_books": {
+    "label": "blabla",
+    "data":[
+        {
+        "sale_id": 102,
+        "book_id":1,
+        "customer_id": 1002,
+        "vendor_id": 45,
+        "date_sold": "2024-04-03",
+        "price_sold": 45
+        }
+
+    ]
+},
+"purchase_information": {
+    "label": "blablabla",
+    "data": [
+      {
+        "purchase_id": 5001,
+        "vendor_id": 1,
+        "book_id": 101,
+        "quantity": 50,
+        "purchase_date": "2025-03-15",
+        "cost_per_unit": 6.00
+      },
+      {
+        "purchase_id": 5002,
+        "vendor_id": 2,
+        "book_id": 102,
+        "quantity": 20,
+        "purchase_date": "2025-04-01",
+        "cost_per_unit": 4.75
+      }
+    ]
+  }
+
+}

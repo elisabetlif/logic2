@@ -1,0 +1,57 @@
+{
+    "registered_customers": [
+      {
+        "customer_id": "CUST001",
+        "address": "123 Main St, Springfield, IL"
+      },
+      {
+        "customer_id": "CUST002",
+        "address": "456 Oak Ave, Metropolis, NY"
+      }
+    ],
+    "vendors": [
+      {
+        "vendor_id": "VEND001"
+      },
+      {
+        "vendor_id": "VEND002"
+      }
+    ],
+    "current_book_offerings": [
+      {
+        "book_id": "BOOK001",
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "year": 1925,
+        "editor": "Maxwell Perkins",
+        "publisher": "Scribner",
+        "condition": "Good",
+        "description": "Classic American novel set in the 1920s",
+        "vendor_id": "VEND001",
+        "price": 15.99
+      },
+      {
+        "book_id": "BOOK002",
+        "title": "1984",
+        "author": "George Orwell",
+        "year": 1949,
+        "editor": "Fred Warburg",
+        "publisher": "Secker & Warburg",
+        "condition": "Very Good",
+        "description": "Dystopian social science fiction novel",
+        "vendor_id": "VEND002",
+        "price": 12.49
+      }
+    ],
+    "sold_books": [
+      {
+        "sale_id": "SALE001",
+        "book_id": "BOOK001",
+        "customer_id": "CUST001",
+        "vendor_id": "VEND001",
+        "date_sold": "2025-04-01",
+        "price": 15.99
+      }
+    ]
+  }
+  

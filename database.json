@@ -1,25 +1,25 @@
 {
     "registered_customers": [
       {
-        "customer_id": "CUST001",
+        "customer_id": 1,
         "address": "123 Main St, Springfield, IL"
       },
       {
-        "customer_id": "CUST002",
+        "customer_id": 2,
         "address": "456 Oak Ave, Metropolis, NY"
       }
     ],
     "vendors": [
       {
-        "vendor_id": "VEND001"
+        "vendor_id": 43782
       },
       {
-        "vendor_id": "VEND002"
+        "vendor_id": 483
       }
     ],
     "current_book_offerings": [
       {
-        "book_id": "BOOK001",
+        "book_id": 5748,
         "title": "The Great Gatsby",
         "author": "F. Scott Fitzgerald",
         "year": 1925,
@@ -31,7 +31,7 @@
         "price": 15.99
       },
       {
-        "book_id": "BOOK002",
+        "book_id": 67678,
         "title": "1984",
         "author": "George Orwell",
         "year": 1949,
@@ -45,10 +45,10 @@
     ],
     "sold_books": [
       {
-        "sale_id": "SALE001",
-        "book_id": "BOOK001",
-        "customer_id": "CUST001",
-        "vendor_id": "VEND001",
+        "sale_id": 67,
+        "book_id": 5748,
+        "customer_id": 45355,
+        "vendor_id": 4242,
         "date_sold": "2025-04-01",
         "price": 15.99
       }

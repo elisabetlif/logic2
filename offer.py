@@ -33,7 +33,7 @@ def vendor_registration(name_vendor, filename='database.json'):
     with open(filename, 'w') as f:
         json.dump(file_data,f,indent=4)
 
-def main():
+def offer():
     title = input("Enter title: ")
     author = input("Enter author name: ")
     year = input("Enter year of publication: ")
@@ -58,4 +58,3 @@ def main():
     write_offer_to_database(new_data)
 
     vendor_registration(name_vendor)
-main()

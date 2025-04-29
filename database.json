@@ -1,190 +1,86 @@
 {
     "registered customers": {
-        "label": "blabla",
-        "data": [
-            {
-                "customer_id": 1,
-                "name": "george"
-            },
-            {
-                "customer_id": 2,
-                "name": "Maude"
-            }
-        ]
+      "data": [
+        {
+          "customer_id": 1,
+          "name": "Patrick",
+          "addr": "124 Conch St."
+        },
+        {
+          "customer_id": 2,
+          "name": "Holmes",
+          "addr": "221B Baker Street"
+        }
+      ]
     },
     "vendors": {
-        "label": "blabla",
-        "data": [
-            {
-                "vendor_id": 1,
-                "name": "Bob"
-            },
-            {
-                "vendor_id": 2,
-                "name": "Steve"
-            },
-            {
-                "vendor_id": 21993,
-                "name": "Tilly "
-            },
-            {
-                "vendor_id": 53644,
-                "name": "Paul Glass"
-            },
-            {
-                "vendor_id": 7298,
-                "name": "Charles mcqueen"
-            }
-        ]
+      "data": [
+        {
+          "vendor_id": 1,
+          "customer_id": 1
+        }
+      ]
     },
     "current book offerings": {
-        "label": "blablabla",
-        "data": [
-            {
-                "book_id": 1,
-                "title": "Huckleberry Finn",
-                "author": "someone",
-                "year": 1999,
-                "edition": 2,
-                "publisher": "Penguin House",
-                "condition": "worn",
-                "description": "A delightful coming of age",
-                "price": 30,
-                "name_vendor": "Bob"
-            },
-            {
-                "title": "adventures of Barbie",
-                "author": "Barbara",
-                "year": 1996,
-                "edition": 1,
-                "publisher": "Mattel",
-                "condition": "slightly worn",
-                "description": "friendship is magic!",
-                "price": 100,
-                "name_vendor": "Rachel"
-            },
-            {
-                "title": "Divergent",
-                "author": "Alice Wonderwood",
-                "year": 2001,
-                "edition": 3,
-                "publisher": "Penguin Random House",
-                "condition": "slightly worn",
-                "description": "YA Distopia",
-                "price": 100,
-                "name_vendor": "Tammy"
-            },
-            {
-                "title": "This hunger",
-                "author": "Bob Williams",
-                "year": "2013",
-                "edition": "1",
-                "publisher": "Edith",
-                "condition": "new",
-                "description": "cannibalism",
-                "price": "150",
-                "name_vendor": "Jens blinken"
-            },
-            {
-                "title": "Sinners",
-                "author": "Ryan Coogler",
-                "year": "2025",
-                "edition": "1",
-                "publisher": "Warner bros",
-                "condition": "new",
-                "description": "vampires!great movie!",
-                "price": "250",
-                "name_vendor": "Neil Young"
-            },
-            {
-                "title": "Triangle of Sadness",
-                "author": "Phil Collins",
-                "year": "2024",
-                "edition": "2",
-                "publisher": "Thrilling productions",
-                "condition": "slightly worn",
-                "description": "rich people stay awful rich people",
-                "price": "100",
-                "name_vendor": "Thalia Newton"
-            },
-            {
-                "title": "Oreos rock!",
-                "author": "oreo inc",
-                "year": "2022",
-                "edition": "5",
-                "publisher": "Oreo inc",
-                "condition": "new",
-                "description": "Oreos are magical!",
-                "price": "500",
-                "name_vendor": "Oreo Mcpherson"
-            },
-            {
-                "title": "information flow",
-                "author": "Myers",
-                "year": "1997",
-                "edition": "10",
-                "publisher": "MIT",
-                "condition": "worn",
-                "description": "here we go into a new way of decentralized model for information flow",
-                "price": "20",
-                "name_vendor": "Lisa Liskov"
-            },
-            {
-                "title": "All pets go to heaven",
-                "author": "Jude Law",
-                "year": "2001",
-                "edition": "2",
-                "publisher": "Law inc",
-                "condition": "worn",
-                "description": "the title explains itself",
-                "price": "75",
-                "name_vendor": "Paul Glass"
-            },
-            {
-                "title": "Abstract math",
-                "author": "Matt Math",
-                "year": "1998",
-                "edition": "5",
-                "publisher": "Math publications",
-                "condition": "worn",
-                "description": "this is abstract math, prepare to cry kids!",
-                "price": "20",
-                "name_vendor": "Charles mcqueen"
-            }
-        ]
-    },
-    "sold_books": {
-        "label": "blabla",
-        "data": [
-            {
-                "sale_id": 102,
-                "book_id": 1,
-                "customer_id": 1002,
-                "vendor_id": 45,
-                "date_sold": "2024-04-03",
-                "price_sold": 45
-            }
-        ]
+      "data": [
+        {
+          "book_id": 1,
+          "price": 30,
+          "name_vendor": "Patrick",
+          "vendor_id": 1
+        },
+        {
+          "book_id": 2,
+          "price": 100,
+          "name_vendor": "Patrick",
+          "vendor_id": 1
+        }
+      ]
     },
     "purchase_information": {
-        "label": "blablabla",
-        "data": [
-            {
-                "purchase_id": 5001,
-                "vendor_id": 1,
-                "book_id": 101,
-                "quantity": 50,
-                "purchase_date": "2025-03-15",
-                "cost_per_unit": 6.0
-            },
-            {
-                "purchase_id": 5002,
-                "vendor_id": 2,
-                "book_id": 102,
-                "quantity": 20,
-                "purchase_date": "2025-04-01",
-                "cost_per_unit": 4.75
-            }
-        ]
+      "data": [
+        {
+          "sale_id": 1,
+          "vendor_id": 1,
+          "customer_id": 2,
+          "book_id": 3,
+          "purchase_date": "2025-03-15",
+          "price_sold": 45
+        }
+      ]
+    },
+    "books": {
+      "data": [
+        {
+          "book_id": 1,
+          "title": "Huckleberry Finn",
+          "author": "someone",
+          "year": 1999,
+          "edition": 2,
+          "publisher": "Penguin House",
+          "condition": "worn",
+          "description": "A delightful coming of age"
+        },
+        {
+          "book_id": 2,
+          "title": "adventures of Barbie",
+          "author": "Barbara",
+          "year": 1996,
+          "edition": 1,
+          "publisher": "Mattel",
+          "condition": "slightly worn",
+          "description": "friendship is magic!"
+        },
+        {
+          "book_id": 3,
+          "title": "Divergent",
+          "author": "Alice Wonderwood",
+          "year": 2001,
+          "edition": 3,
+          "publisher": "Penguin Random House",
+          "condition": "slightly worn",
+          "description": "YA Distopia"
+        }
+      ]
     }
-}
+  }

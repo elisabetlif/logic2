@@ -53,33 +53,35 @@
       "data": [
         {
           "book_id": 1,
-          "title": "Huckleberry Finn",
+          "info":{"title": "Huckleberry Finn",
           "author": "someone",
           "year": 1999,
           "edition": 2,
           "publisher": "Penguin House",
           "condition": "worn",
-          "description": "A delightful coming of age"
+          "description": "A delightful coming of age"}
+          
         },
         {
           "book_id": 2,
-          "title": "adventures of Barbie",
+          "info":{"title": "adventures of Barbie",
           "author": "Barbara",
           "year": 1996,
           "edition": 1,
           "publisher": "Mattel",
           "condition": "slightly worn",
-          "description": "friendship is magic!"
+          "description": "friendship is magic!"}
         },
         {
           "book_id": 3,
-          "title": "Divergent",
+          "info":{ "title": "Divergent",
           "author": "Alice Wonderwood",
           "year": 2001,
           "edition": 3,
           "publisher": "Penguin Random House",
           "condition": "slightly worn",
-          "description": "YA Distopia"
+          "description": "YA Distopia"}
+         
         }
       ]
     }

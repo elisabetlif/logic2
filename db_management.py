@@ -1,8 +1,10 @@
-def db_management(i:int):
-    try:
-        new_db = int(i)
-        print(f"You have changed {new_db} to new DB!")
-    except ValueError:
-        raise ValueError(f"args {i} is not an int")
+import os
+
+def db_management():
+
+    for filename in os.listdir('session-databases'):
+        file_path = os.path.join('session-databases', filename)
+        if os.path.isfile(file_path):
+            os.remove(file_path)
             
         

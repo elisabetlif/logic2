@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 from datetime import date
 
-#def write_purchase_to_database(data_input,session_id):
+
 def write_purchase_to_database(data_input,session_id):
     filename = f'session-databases/database{session_id}.json'
     

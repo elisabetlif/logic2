@@ -1,57 +1,88 @@
 {
-    "registered_customers": [
-      {
-        "customer_id": 1,
-        "address": "123 Main St, Springfield, IL"
-      },
-      {
-        "customer_id": 2,
-        "address": "456 Oak Ave, Metropolis, NY"
-      }
-    ],
-    "vendors": [
-      {
-        "vendor_id": 43782
-      },
-      {
-        "vendor_id": 483
-      }
-    ],
-    "current_book_offerings": [
-      {
-        "book_id": 5748,
-        "title": "The Great Gatsby",
-        "author": "F. Scott Fitzgerald",
-        "year": 1925,
-        "editor": "Maxwell Perkins",
-        "publisher": "Scribner",
-        "condition": "Good",
-        "description": "Classic American novel set in the 1920s",
-        "vendor_id": "VEND001",
-        "price": 15.99
-      },
-      {
-        "book_id": 67678,
-        "title": "1984",
-        "author": "George Orwell",
-        "year": 1949,
-        "editor": "Fred Warburg",
-        "publisher": "Secker & Warburg",
-        "condition": "Very Good",
-        "description": "Dystopian social science fiction novel",
-        "vendor_id": "VEND002",
-        "price": 12.49
-      }
-    ],
-    "sold_books": [
-      {
-        "sale_id": 67,
-        "book_id": 5748,
-        "customer_id": 45355,
-        "vendor_id": 4242,
-        "date_sold": "2025-04-01",
-        "price": 15.99
-      }
-    ]
+    "registered customers": {
+      "data": [
+        {
+          "customer_id": 1,
+          "name": "Patrick",
+          "addr": "124 Conch St."
+        },
+        {
+          "customer_id": 2,
+          "name": "Holmes",
+          "addr": "221B Baker Street"
+        }
+      ]
+    },
+    "vendors": {
+      "data": [
+        {
+          "vendor_id": 1,
+          "customer_id": 1
+        }
+      ]
+    },
+    "current book offerings": {
+      "data": [
+        {
+          "book_id": 1,
+          "price": 30,
+          "name_vendor": "Patrick",
+          "vendor_id": 1
+        },
+        {
+          "book_id": 2,
+          "price": 100,
+          "name_vendor": "Patrick",
+          "vendor_id": 1
+        }
+      ]
+    },
+    "purchase_information": {
+      "data": [
+        {
+          "sale_id": 1,
+          "vendor_id": 1,
+          "customer_id": 2,
+          "book_id": 3,
+          "purchase_date": "2025-03-15",
+          "price_sold": 45
+        }
+      ]
+    },
+    "books": {
+      "data": [
+        {
+          "book_id": 1,
+          "info":{"title": "Huckleberry Finn",
+          "author": "someone",
+          "year": 1999,
+          "edition": 2,
+          "publisher": "Penguin House",
+          "condition": "worn",
+          "description": "A delightful coming of age"}
+          
+        },
+        {
+          "book_id": 2,
+          "info":{"title": "adventures of Barbie",
+          "author": "Barbara",
+          "year": 1996,
+          "edition": 1,
+          "publisher": "Mattel",
+          "condition": "slightly worn",
+          "description": "friendship is magic!"}
+        },
+        {
+          "book_id": 3,
+          "info":{ "title": "Divergent",
+          "author": "Alice Wonderwood",
+          "year": 2001,
+          "edition": 3,
+          "publisher": "Penguin Random House",
+          "condition": "slightly worn",
+          "description": "YA Distopia"}
+         
+        }
+      ]
+    }
   }
-  

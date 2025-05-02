@@ -1,11 +1,31 @@
 from enum import Enum
+from dotenv import load_dotenv
+import os
 import importlib
+import shutil
+from pathlib import Path
 
 class Choice(Enum):
     search = "search"
     purchase = "purchase"
     offer = "offer"
     db_management = "db_management"
+
+def copyDB(session_id):
+    src_path = Path('database.json')
+    dest_folder = Path('session-databases')
+    new_name = 'database'+str(session_id)+'.json'
+    dest_folder.mkdir(parents=True, exist_ok=True)
+    dest_file = dest_folder / (new_name)
+    shutil.copy2(src_path, dest_file)
+
+def update_session():
+    load_dotenv(dotenv_path="var.env")
+    new_session = 1+int(os.getenv("SESSION_ID"))
+    os.environ['SESSION_ID']=str(new_session)
+    with open("var.env", "w") as f:
+        f.write(f"SESSION_ID={new_session}\n")
+    copyDB(new_session)
 
 
 def main():
@@ -46,4 +66,5 @@ def user_input():
     
 
 if __name__ == "__main__":
+    update_session()
     main()

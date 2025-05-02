@@ -1,0 +1,11 @@
+#virtual enviroment
+venv/
+.venv/
+
+#enviroment variables
+/var.env
+
+#extra databases
+session-databases/*
+!session-databases/.gitkeep
+

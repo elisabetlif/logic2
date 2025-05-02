@@ -113,6 +113,26 @@ def get_address_of_customer(customer_id, session_id):
             return entry["addr"]
     return None
 
+
+def remove_book_after_purchase(book_id,session_id):
+    filename = f'session-databases/database{session_id}.json'
+    with open(filename, 'r+') as file:
+        file_data = json.load(file)
+   # Remove from "current_book_offerings"
+        current_offerings = file_data.get("current book offerings", {}).get("data", [])
+        filtered_offerings = [entry for entry in current_offerings if entry.get("book_id") != book_id]
+        file_data["current book offerings"]["data"] = filtered_offerings
+
+     # Remove from "books"
+        books_data = file_data.get("books", {}).get("data", [])
+        filtered_books = [book for book in books_data if book.get("book_id") != book_id]
+        file_data["books"]["data"] = filtered_books
+
+    # Move cursor to the beginning and overwrite the file
+        file.seek(0)
+        json.dump(file_data, file, indent=2)
+        file.truncate()
+
  
 def purchase(*args):
     load_dotenv(dotenv_path="var.env")
@@ -133,6 +153,7 @@ def purchase(*args):
 
     if check_book_offer(book_id,session_id) and check_price(price,book_id,session_id):
         write_purchase_to_database(data_input,session_id)
+        remove_book_after_purchase(book_id,session_id)
         print("congrats on your purchase!")
         print("Here is the shipping address: ", customer_address)
     else:

@@ -96,7 +96,7 @@ def check_book_offer(book_id,session_id):
     for entry in book_data:
         if entry["book_id"] == book_id:
             return True
-    #Here the Marketplace gives an output to the customer and so the flow changes into {marketplace: customer}
+    #Here the Marketplace gives an output to the customer and so the flow changes into {marketplace: customer} - declassificasion has to happen
     print("We're not currently offering this book")
     return False
 
@@ -113,7 +113,7 @@ def check_price(price,book_id,session_id):
             if  entry["price"] == price:
                 return True
             else:
-                #Here the Marketplace gives an output to the customer and so the flow changes into {marketplace: customer}
+                #Here the Marketplace gives an output to the customer and so the flow changes into {marketplace: customer} - declassificasion has to happen
                 print("You have input the wrong price, redo the process")
                 return False
     return False
@@ -180,7 +180,7 @@ def purchase(*args):
         remove_book_after_purchase(book_id,session_id)
         #Here the Marketplace gives an output to the customer and so the flow changes into {marketplace: customer}
         print("congrats on your purchase!")
-        #The output and customer address goes to both vendor and customer and so the flow is: {marketplace: customer,vendor}
+        #The output and customer address goes to both vendor and customer and so the flow is: {marketplace: customer,vendor} - declassificasion has to happen
         print("Here is the shipping address: ", customer_address)
     else:
         print("redo the process")

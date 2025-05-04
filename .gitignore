@@ -9,3 +9,5 @@ venv/
 session-databases/*
 !session-databases/.gitkeep
 
+__pycache__/
+

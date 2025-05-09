@@ -19,34 +19,32 @@ def write_purchase_to_database(data_input,session_id):
     
     
     #create sales_id
-    #internal process within The Marketplace and so flow is: {marketplace:marketplace}
     new_sales_id = 1+ get_last_sales_id(file_data)
 
 
     #extract the customer_id from the customer input
-    #internal process within The Marketplace and so flow is: {marketplace:marketplace}
     customer_id = data_input["customer_id"]
     
     #extract the book_id from the customer input
-     #internal process within The Marketplace and so flow is: {marketplace:marketplace}
+
     book_id = data_input["book_id"]
 
     #fetch vendor_id
-     #internal process within The Marketplace and so flow is: {marketplace:marketplace}
+
     vendor_id = fetch_vendor_id(file_data,book_id)
     
     
     #create the purchase date
-     #internal process within The Marketplace and so flow is: {marketplace:marketplace}
+
     purchase_date = date.today()
    
 
     #extract price from customer input
-     #internal process within The Marketplace and so flow is: {marketplace:marketplace}
+    
     price_sold = data_input["price_sold"]
 
     #let's construct the purchase data that will go into the database
-    #internal process within The Marketplace and so flow is: {marketplace:marketplace}
+   
     new_purchase = {
         "sale_id": new_sales_id,
         "vendor_id" : vendor_id,
@@ -58,7 +56,7 @@ def write_purchase_to_database(data_input,session_id):
     
     
     # Write back to file
-     #internal process within The Marketplace and so flow is: {marketplace:marketplace}
+     
     with open(filename, 'w') as file:
         file_data[purchase_section]['data'].append(new_purchase)
         file.seek(0)
@@ -67,7 +65,7 @@ def write_purchase_to_database(data_input,session_id):
 
 
 #Get last sales ID in order to create a new sales ID for the purchase
- #internal process within The Marketplace and so flow is: {marketplace:marketplace}
+ 
 def get_last_sales_id(database):
     last_sales_id = database.get("purchase_information", {}).get("data",[])
     if last_sales_id:
@@ -77,7 +75,7 @@ def get_last_sales_id(database):
 
 
 #fetch vendor ID given the book ID from the customer input
- #internal process within The Marketplace and so flow is: {marketplace:marketplace}
+
 def fetch_vendor_id(database,book_id):
     book_data = database.get("current book offerings", {}).get("data",[])
     vendor_id = next(
@@ -87,7 +85,7 @@ def fetch_vendor_id(database,book_id):
 
 
 #check if the offer is still valid
-#Marketplace has proccessed the input from the customer and so this is an internal process within Marketplace and so the flow is {marketplace:marketplace}
+
 def check_book_offer(book_id,session_id):
     filename = f'session-databases/database{session_id}.json'
     with open(filename, 'r+') as file:
@@ -102,7 +100,7 @@ def check_book_offer(book_id,session_id):
 
 
 #check if the input price matches the bood id
-#Marketplace has proccessed the input from the customer and so this is an internal process within Marketplace and so the flow is {marketplace:marketplace}    
+
 def check_price(price,book_id,session_id):
     filename = f'session-databases/database{session_id}.json'
     with open(filename, 'r+') as file:
@@ -120,7 +118,7 @@ def check_price(price,book_id,session_id):
 
 
 #get the address of the customer for the confirmation of purchase message
- #internal process within The Marketplace and so flow is: {marketplace:marketplace}
+
 def get_address_of_customer(customer_id, session_id):
     filename = f'session-databases/database{session_id}.json'
     with open(filename, 'r+') as file:
@@ -133,7 +131,7 @@ def get_address_of_customer(customer_id, session_id):
 
 
 #Book is removed from the database after being purchased
- #internal process within The Marketplace and so flow is: {marketplace:marketplace}
+
 def remove_book_after_purchase(book_id,session_id):
     filename = f'session-databases/database{session_id}.json'
     with open(filename, 'r+') as file:
@@ -159,8 +157,7 @@ def purchase(*args):
     session_id = os.getenv("SESSION_ID")
 
     #customer inputs these three items and sends a purchase request to Marketplace
-    #{customer: marketplace} for these three inputs
-    #for the outputs from marketplace to the customer - encouraging them to enter specific information then the flow is {marketplace:customer}
+   
     book_id = int(input("Enter the book ID of the book you wish to purchase: "))
     price = int(input("Enter the offered price of the book: "))
     customer_id = int(input("Enter your customer ID: "))
@@ -173,14 +170,13 @@ def purchase(*args):
       "price_sold" : price,
       "customer_id" : customer_id
     }
-    #here marketplace processes the customer input and performs the necessary checks
-    # The flow goes from {customer: marketplace} to {marketplace:marketplace}  
+   
     if check_book_offer(book_id,session_id) and check_price(price,book_id,session_id):
         write_purchase_to_database(data_input,session_id)
         remove_book_after_purchase(book_id,session_id)
-        #Here the Marketplace gives an output to the customer and so the flow changes into {marketplace: customer}
+       
         print("congrats on your purchase!")
-        #The output and customer address goes to both vendor and customer and so the flow is: {marketplace: customer,vendor} - declassificasion has to happen
+        
         print("Here is the shipping address: ", customer_address)
     else:
         print("redo the process")
